@@ -14,6 +14,7 @@ class CreateAStoryCollectionViewCell: UICollectionViewCell {
 
    
     @IBOutlet weak var profileImage: UIView!
+    @IBOutlet weak var ivProfileImage: UIImageView!
     @IBOutlet weak var addPlus: UIView!
     @IBOutlet weak var ivAddPlus: UIImageView!
     
@@ -24,6 +25,9 @@ class CreateAStoryCollectionViewCell: UICollectionViewCell {
         ivAddPlus.layer.cornerRadius = ivAddPlus.frame.width / 2
         
         profileImage.layer.cornerRadius = 10
+        
+        ivProfileImage.layer.cornerRadius = 10
+        ivProfileImage.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
     }
 

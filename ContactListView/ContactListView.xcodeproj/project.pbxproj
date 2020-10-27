@@ -63,6 +63,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3492C7ED2547C49B007A2994 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3492C7F12547C8A3007A2994 /* Cell */,
+				3492C7F02547C894007A2994 /* ViewController */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3492C7EE2547C4A6007A2994 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3AF1D9162529900B00DC40EF /* Main.storyboard */,
+				3AF1D9192529901400DC40EF /* Assets.xcassets */,
+				3AF1D91B2529901400DC40EF /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3492C7F02547C894007A2994 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3AF1D924252990BE00DC40EF /* ContactListViewController.swift */,
+				3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */,
+				3ABF152B2541404C007BF50C /* HomeViewController.swift */,
+				3A5B5829254488C80059FD5C /* FacebookViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3492C7F12547C8A3007A2994 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AF1D92A2529A28600DC40EF /* ContactListViewItemTableViewCell.swift */,
+				3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */,
+				3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */,
+				3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */,
+				3ACFE9962543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift */,
+				3ACFE9972543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib */,
+				3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */,
+				3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */,
+				3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */,
+				3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3AF1D9042529900B00DC40EF = {
 			isa = PBXGroup;
 			children = (
@@ -82,26 +129,11 @@
 		3AF1D90F2529900B00DC40EF /* ContactListView */ = {
 			isa = PBXGroup;
 			children = (
+				3492C7EE2547C4A6007A2994 /* Resource */,
+				3492C7ED2547C49B007A2994 /* View */,
 				3AF1D9102529900B00DC40EF /* AppDelegate.swift */,
 				3AF1D9122529900B00DC40EF /* SceneDelegate.swift */,
-				3AF1D9162529900B00DC40EF /* Main.storyboard */,
-				3AF1D9192529901400DC40EF /* Assets.xcassets */,
-				3AF1D91B2529901400DC40EF /* LaunchScreen.storyboard */,
 				3AF1D91E2529901400DC40EF /* Info.plist */,
-				3AF1D924252990BE00DC40EF /* ContactListViewController.swift */,
-				3AF1D92A2529A28600DC40EF /* ContactListViewItemTableViewCell.swift */,
-				3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */,
-				3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */,
-				3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */,
-				3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */,
-				3ABF152B2541404C007BF50C /* HomeViewController.swift */,
-				3ACFE9962543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift */,
-				3ACFE9972543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib */,
-				3A5B5829254488C80059FD5C /* FacebookViewController.swift */,
-				3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */,
-				3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */,
-				3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */,
-				3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */,
 			);
 			path = ContactListView;
 			sourceTree = "<group>";

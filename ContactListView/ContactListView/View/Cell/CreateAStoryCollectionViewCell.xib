@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CreateAStoryCollectionViewCell" customModule="ContactListView" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="CreateAStoryCollectionViewCell" customModule="ContactListView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="57" height="95"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -36,7 +38,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="N65-UR-egZ"/>
                                     <constraint firstItem="1b9-HX-3kF" firstAttribute="centerX" secondItem="NRB-38-7qm" secondAttribute="centerX" id="SPV-JF-ciZ"/>
@@ -51,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="mva-Ih-Nid" firstAttribute="top" secondItem="NFB-Xp-Kd0" secondAttribute="top" id="51m-zi-peF"/>
                             <constraint firstItem="CTt-Aj-8mj" firstAttribute="leading" secondItem="NFB-Xp-Kd0" secondAttribute="leading" constant="8" id="9nk-jf-esK"/>
@@ -66,23 +68,27 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="NFB-Xp-Kd0" secondAttribute="trailing" constant="2" id="EQ8-2L-cAd"/>
                 <constraint firstItem="NFB-Xp-Kd0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="Pqx-Mc-afi"/>
                 <constraint firstItem="NFB-Xp-Kd0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="jtR-XA-FVj"/>
                 <constraint firstAttribute="bottom" secondItem="NFB-Xp-Kd0" secondAttribute="bottom" constant="4" id="ugy-Nw-AlT"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="addPlus" destination="NRB-38-7qm" id="dcQ-cy-yek"/>
                 <outlet property="ivAddPlus" destination="1b9-HX-3kF" id="mS7-nS-e1s"/>
+                <outlet property="ivProfileImage" destination="mva-Ih-Nid" id="lCM-mn-TZa"/>
                 <outlet property="profileImage" destination="NFB-Xp-Kd0" id="VkI-hd-Dyr"/>
             </connections>
-            <point key="canvasLocation" x="139" y="124"/>
+            <point key="canvasLocation" x="51" y="97"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="51Lzc4O-iuL" width="334" height="500"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
