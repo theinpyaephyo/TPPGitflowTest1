@@ -108,7 +108,7 @@ extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == addStoryCollectionView {
-           return CGSize(width: 75, height: 120)
+           return CGSize(width: 110, height: 190)
         } else {
             if indexPath.row == 0 {
                 
