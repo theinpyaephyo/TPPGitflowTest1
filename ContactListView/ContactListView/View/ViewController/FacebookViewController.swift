@@ -48,6 +48,9 @@ class FacebookViewController: UIViewController {
         collectionViewRoomItem.dataSource = self
         
         collectionViewRoomItem.delegate = self
+        
+        collectionViewRoomItem.contentInset = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
+        addStoryCollectionView.contentInset = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
     }
     
   
@@ -105,7 +108,7 @@ extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == addStoryCollectionView {
-           return CGSize(width: 57, height: 95)
+           return CGSize(width: 75, height: 120)
         } else {
             if indexPath.row == 0 {
                 
