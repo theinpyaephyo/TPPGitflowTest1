@@ -16,6 +16,8 @@
 		3ABF15292541400A007BF50C /* RoomItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */; };
 		3ABF152A2541400A007BF50C /* RoomItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */; };
 		3ABF152C2541404C007BF50C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF152B2541404C007BF50C /* HomeViewController.swift */; };
+		3AC1BEB3254A65D300175921 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1BEB1254A65D300175921 /* NewsFeedTableViewCell.swift */; };
+		3AC1BEB4254A65D300175921 /* NewsFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1BEB2254A65D300175921 /* NewsFeedTableViewCell.xib */; };
 		3ACFE9982543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFE9962543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift */; };
 		3ACFE9992543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ACFE9972543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib */; };
 		3AF1D9112529900B00DC40EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1D9102529900B00DC40EF /* AppDelegate.swift */; };
@@ -38,6 +40,8 @@
 		3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		3ABF152B2541404C007BF50C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3AC1BEB1254A65D300175921 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
+		3AC1BEB2254A65D300175921 /* NewsFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedTableViewCell.xib; sourceTree = "<group>"; };
 		3ACFE9962543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		3ACFE9972543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRoomCollectionViewCell.xib; sourceTree = "<group>"; };
 		3AF1D90D2529900B00DC40EF /* ContactListView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactListView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,8 @@
 				3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */,
 				3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */,
 				3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */,
+				3AC1BEB1254A65D300175921 /* NewsFeedTableViewCell.swift */,
+				3AC1BEB2254A65D300175921 /* NewsFeedTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				3A5B582E2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib in Resources */,
 				3ABF152A2541400A007BF50C /* RoomItemCollectionViewCell.xib in Resources */,
 				3AF1D9182529900B00DC40EF /* Main.storyboard in Resources */,
+				3AC1BEB4254A65D300175921 /* NewsFeedTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 			files = (
 				3AF1D925252990BE00DC40EF /* ContactListViewController.swift in Sources */,
 				3ACFE9982543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift in Sources */,
+				3AC1BEB3254A65D300175921 /* NewsFeedTableViewCell.swift in Sources */,
 				3A6FC355253CACAE006E4B04 /* DatePickerViewController.swift in Sources */,
 				3ABF15292541400A007BF50C /* RoomItemCollectionViewCell.swift in Sources */,
 				3AF1D9112529900B00DC40EF /* AppDelegate.swift in Sources */,

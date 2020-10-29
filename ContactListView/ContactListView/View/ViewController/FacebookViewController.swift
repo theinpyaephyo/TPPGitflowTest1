@@ -18,6 +18,7 @@ class FacebookViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addStoryCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewRoomItem: UICollectionView!
+    @IBOutlet weak var tableViewPostItem: UITableView!
     
     
     override func viewDidLoad() {
@@ -51,6 +52,15 @@ class FacebookViewController: UIViewController {
         
         collectionViewRoomItem.contentInset = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
         addStoryCollectionView.contentInset = UIEdgeInsets(top: 2, left: 8, bottom: 2, right: 8)
+        
+        
+        //table View
+        tableViewPostItem.register(UINib(nibName: NewsFeedTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: NewsFeedTableViewCell.identifier)
+        
+        tableViewPostItem.dataSource = self
+        
+        tableViewPostItem.isScrollEnabled = false
+        
     }
     
   
@@ -122,4 +132,17 @@ extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDele
         }
         
     }
+}
+
+//Table View
+extension FacebookViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsFeedTableViewCell.identifier, for: indexPath) as! NewsFeedTableViewCell
+        return cell
+    }
+  
 }
