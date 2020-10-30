@@ -18,7 +18,7 @@ class FacebookViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var addStoryCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewRoomItem: UICollectionView!
-    @IBOutlet weak var tableViewPostItem: UITableView!
+    @IBOutlet weak var tableViewPostItem: IntrinsicTableView!
     
     
     override func viewDidLoad() {
@@ -58,9 +58,7 @@ class FacebookViewController: UIViewController {
         tableViewPostItem.register(UINib(nibName: NewsFeedTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: NewsFeedTableViewCell.identifier)
         
         tableViewPostItem.dataSource = self
-        
-        tableViewPostItem.isScrollEnabled = false
-        
+                
     }
     
   

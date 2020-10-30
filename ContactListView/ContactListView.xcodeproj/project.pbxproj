@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */; };
 		3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5829254488C80059FD5C /* FacebookViewController.swift */; };
 		3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */; };
 		3A5B582E2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrisiveTableView.swift; sourceTree = "<group>"; };
 		3A5B5829254488C80059FD5C /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3AF1D9102529900B00DC40EF /* AppDelegate.swift */,
 				3AF1D9122529900B00DC40EF /* SceneDelegate.swift */,
 				3AF1D91E2529901400DC40EF /* Info.plist */,
+				34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */,
 			);
 			path = ContactListView;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */,
 				3A9A298B25468CFF000A94FD /* CreateAStoryCollectionViewCell.swift in Sources */,
 				3ABF152C2541404C007BF50C /* HomeViewController.swift in Sources */,
+				34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */,
 				3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */,
 				3AF1D9132529900B00DC40EF /* SceneDelegate.swift in Sources */,
 			);
