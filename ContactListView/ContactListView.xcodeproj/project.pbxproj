@@ -11,6 +11,7 @@
 		3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5829254488C80059FD5C /* FacebookViewController.swift */; };
 		3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */; };
 		3A5B582E2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */; };
+		3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6777DE255181B8009D6DB3 /* AdidasViewController.swift */; };
 		3A6FC355253CACAE006E4B04 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */; };
 		3A9A298B25468CFF000A94FD /* CreateAStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */; };
 		3A9A298C25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */; };
@@ -36,6 +37,7 @@
 		3A5B5829254488C80059FD5C /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A6777DE255181B8009D6DB3 /* AdidasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdidasViewController.swift; sourceTree = "<group>"; };
 		3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAStoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */,
 				3ABF152B2541404C007BF50C /* HomeViewController.swift */,
 				3A5B5829254488C80059FD5C /* FacebookViewController.swift */,
+				3A6777DE255181B8009D6DB3 /* AdidasViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				3A6FC355253CACAE006E4B04 /* DatePickerViewController.swift in Sources */,
 				3ABF15292541400A007BF50C /* RoomItemCollectionViewCell.swift in Sources */,
 				3AF1D9112529900B00DC40EF /* AppDelegate.swift in Sources */,
+				3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */,
 				3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */,
 				3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */,
 				3A9A298B25468CFF000A94FD /* CreateAStoryCollectionViewCell.swift in Sources */,
