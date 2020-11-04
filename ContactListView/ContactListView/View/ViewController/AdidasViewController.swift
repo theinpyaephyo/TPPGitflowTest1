@@ -12,13 +12,20 @@ class AdidasViewController: UIViewController {
     
     static let identifier = "AdidasViewController"
 
-    @IBOutlet weak var detailDescriptionView: UIView!
+    @IBOutlet weak var detailDescriptionView: CardView!
+    @IBOutlet weak var upperView: UIView!
+    @IBOutlet weak var ivShoeImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        detailDescriptionView.layer.cornerRadius = 100
+        detailDescriptionView.layer.cornerRadius = 50
         detailDescriptionView.layer.maskedCorners = [.layerMinXMinYCorner]
+        
+        upperView.layer.cornerRadius = 50
+        upperView.layer.maskedCorners = [.layerMinXMinYCorner]
+        
+//        ivShoeImage.transform = ivShoeImage.transform.rotated(by: .pi / 4)
     }
     
 

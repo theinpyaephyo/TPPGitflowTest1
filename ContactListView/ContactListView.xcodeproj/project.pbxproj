@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */; };
+		34F23C9C255189AE00D2EE72 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F23C9B255189AD00D2EE72 /* CardView.swift */; };
 		3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5829254488C80059FD5C /* FacebookViewController.swift */; };
 		3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */; };
 		3A5B582E2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */; };
@@ -30,10 +31,13 @@
 		3AF1D925252990BE00DC40EF /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1D924252990BE00DC40EF /* ContactListViewController.swift */; };
 		3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1D92A2529A28600DC40EF /* ContactListViewItemTableViewCell.swift */; };
 		3AF1D92D2529A28600DC40EF /* ContactListViewItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */; };
+		54D874C830FD94D0C8CBD79A /* Pods_ContactListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrisiveTableView.swift; sourceTree = "<group>"; };
+		34F23C9B255189AD00D2EE72 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3A5B5829254488C80059FD5C /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3A5B582B2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A5B582C2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddStoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		3AF1D924252990BE00DC40EF /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		3AF1D92A2529A28600DC40EF /* ContactListViewItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewItemTableViewCell.swift; sourceTree = "<group>"; };
 		3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListViewItemTableViewCell.xib; sourceTree = "<group>"; };
+		5F77F5D582ADE73DB1C45CA2 /* Pods-ContactListView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactListView.debug.xcconfig"; path = "Target Support Files/Pods-ContactListView/Pods-ContactListView.debug.xcconfig"; sourceTree = "<group>"; };
+		A4BAB7C7E9EE189D4EA59DE5 /* Pods-ContactListView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactListView.release.xcconfig"; path = "Target Support Files/Pods-ContactListView/Pods-ContactListView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +71,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D874C830FD94D0C8CBD79A /* Pods_ContactListView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D7AE977E0972D27901985AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F77F5D582ADE73DB1C45CA2 /* Pods-ContactListView.debug.xcconfig */,
+				A4BAB7C7E9EE189D4EA59DE5 /* Pods-ContactListView.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3492C7ED2547C49B007A2994 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +143,8 @@
 			children = (
 				3AF1D90F2529900B00DC40EF /* ContactListView */,
 				3AF1D90E2529900B00DC40EF /* Products */,
+				2D7AE977E0972D27901985AF /* Pods */,
+				FAFE3369DBD1D924E543B1B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,8 +165,17 @@
 				3AF1D9122529900B00DC40EF /* SceneDelegate.swift */,
 				3AF1D91E2529901400DC40EF /* Info.plist */,
 				34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */,
+				34F23C9B255189AD00D2EE72 /* CardView.swift */,
 			);
 			path = ContactListView;
+			sourceTree = "<group>";
+		};
+		FAFE3369DBD1D924E543B1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AF1D9212529901400DC40EF /* Build configuration list for PBXNativeTarget "ContactListView" */;
 			buildPhases = (
+				BC0B4BF95563E2F0BDFCFC2C /* [CP] Check Pods Manifest.lock */,
 				3AF1D9092529900B00DC40EF /* Sources */,
 				3AF1D90A2529900B00DC40EF /* Frameworks */,
 				3AF1D90B2529900B00DC40EF /* Resources */,
+				A9E0342A604D51A371ABEB0B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +252,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9E0342A604D51A371ABEB0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ContactListView/Pods-ContactListView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ContactListView/Pods-ContactListView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContactListView/Pods-ContactListView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC0B4BF95563E2F0BDFCFC2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactListView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AF1D9092529900B00DC40EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -231,6 +303,7 @@
 				3ACFE9982543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift in Sources */,
 				3AC1BEB3254A65D300175921 /* NewsFeedTableViewCell.swift in Sources */,
 				3A6FC355253CACAE006E4B04 /* DatePickerViewController.swift in Sources */,
+				34F23C9C255189AE00D2EE72 /* CardView.swift in Sources */,
 				3ABF15292541400A007BF50C /* RoomItemCollectionViewCell.swift in Sources */,
 				3AF1D9112529900B00DC40EF /* AppDelegate.swift in Sources */,
 				3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */,
@@ -382,6 +455,7 @@
 		};
 		3AF1D9222529901400DC40EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F77F5D582ADE73DB1C45CA2 /* Pods-ContactListView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,6 +475,7 @@
 		};
 		3AF1D9232529901400DC40EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4BAB7C7E9EE189D4EA59DE5 /* Pods-ContactListView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

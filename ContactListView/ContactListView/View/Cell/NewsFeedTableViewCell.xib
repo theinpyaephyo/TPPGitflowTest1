@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2Z-ie-R6U">
                                         <rect key="frame" x="16" y="16" width="48" height="48"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-wg-SHR">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="41gxXYRYp8L._AC_" translatesAutoresizingMaskIntoConstraints="NO" id="eAt-wg-SHR">
                                                 <rect key="frame" x="3" y="3" width="42" height="42"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42" id="BEu-xn-RXE"/>
@@ -407,10 +407,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ivProfileImage" destination="eAt-wg-SHR" id="Hht-Ym-YI8"/>
+            </connections>
             <point key="canvasLocation" x="152.17391304347828" y="112.16517857142857"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="41gxXYRYp8L._AC_" width="347" height="500"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.right" catalog="system" width="128" height="106"/>
         <image name="bubble.left" catalog="system" width="128" height="110"/>
