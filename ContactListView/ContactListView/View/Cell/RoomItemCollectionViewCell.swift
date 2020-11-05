@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import SDWebImage
 
 class RoomItemCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "RoomItemCollectionViewCell"
+    
     @IBOutlet weak var ivProfileImage: UIImageView!
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var innerView: UIView!
+    
+    // computed property
+    var profileImageUrl: ImageUrlVO? {
+        didSet {
+            if let imageUrl = profileImageUrl {
+                ivProfileImage.sd_setImage(with: URL(string: imageUrl.url ?? ""), placeholderImage: UIImage(named: "black"))
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

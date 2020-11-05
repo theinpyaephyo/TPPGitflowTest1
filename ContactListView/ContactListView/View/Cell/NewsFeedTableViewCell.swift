@@ -20,8 +20,6 @@ class NewsFeedTableViewCell: UITableViewCell {
     
         ivProfileImage.sd_setImage(with: URL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSsMUhHE3cKLX-RNVQP1_Yu79Gd2Ix3nQ0p=CAU"), placeholderImage: UIImage(named: "black"))
         
-      
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
