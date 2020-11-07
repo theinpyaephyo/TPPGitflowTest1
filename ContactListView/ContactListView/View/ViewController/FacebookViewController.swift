@@ -49,9 +49,8 @@ class FacebookViewController: UIViewController {
             
             let img = ImageUrlVO(url: imagePath)
             
-            imageUrlObjectList.append(img)
-            
-            
+            addStoryObjectList.append(img)
+        
         }
         
         messengerOutter.layer.cornerRadius = messengerOutter.frame.width / 2
@@ -117,6 +116,7 @@ extension FacebookViewController: UICollectionViewDataSource{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddStoryCollectionViewCell.identifier, for: indexPath) as! AddStoryCollectionViewCell
                 let count = indexPath.row - 1
                 cell.storyImageUrl = addStoryObjectList[count]
+                cell.addStoryItemDelegate = self
                 return cell
             }
             
@@ -177,6 +177,18 @@ extension FacebookViewController: UITableViewDataSource {
     }
   
 }
+
+extension FacebookViewController: AddStoryItemDelegate {
+    func onTheinPayePhyo(imageUrl: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: StoryImageDetailsViewController.identifier) as! StoryImageDetailsViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        vc.storyImage = imageUrl
+    }
+}
+
+
 
 
 // JSON Format => object format ====> JSON Serialize/ decode   encode
