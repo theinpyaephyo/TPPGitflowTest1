@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AddStoryCollectionViewCell: UICollectionViewCell {
 
@@ -17,6 +18,15 @@ class AddStoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var addStoryImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
    
+    var storyImageUrl: ImageUrlVO? {
+        
+        didSet{
+            if let storyImage = storyImageUrl{
+                
+                addStoryImage.sd_setImage(with: URL(string: storyImage.url ?? ""), placeholderImage: UIImage(named: "black"))
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
