@@ -38,7 +38,7 @@ class RoomItemCollectionViewCell: UICollectionViewCell {
         
         parentView.isUserInteractionEnabled = true
         
-        let tapGesture = UIGestureRecognizer(target: self, action: #selector(onClick))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClick))
         parentView.addGestureRecognizer(tapGesture)
     }
 

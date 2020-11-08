@@ -29,7 +29,7 @@ class RoomItemDetailViewController: UIViewController {
         
         closeView.isUserInteractionEnabled = true
         
-        let tapGesture = UIGestureRecognizer(target: self, action: #selector(onClick))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClick))
         closeView.addGestureRecognizer(tapGesture)
 
         
