@@ -13,6 +13,9 @@ class RoomItemCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "RoomItemCollectionViewCell"
     
+    var addRoomItemDelegate: AddRoomItemDelegate?
+    
+    @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var ivProfileImage: UIImageView!
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var innerView: UIView!
@@ -33,7 +36,17 @@ class RoomItemCollectionViewCell: UICollectionViewCell {
         outerView.layer.cornerRadius = outerView.frame.width / 2
         innerView.layer.cornerRadius = innerView.frame.width / 2
         
+        parentView.isUserInteractionEnabled = true
         
+        let tapGesture = UIGestureRecognizer(target: self, action: #selector(onClick))
+        parentView.addGestureRecognizer(tapGesture)
     }
 
+    @objc func onClick() {
+        if let imageUrl = profileImageUrl?.url {
+             addRoomItemDelegate?.onClick(imageUrl: imageUrl)
+        }
+       
+    }
+    
 }

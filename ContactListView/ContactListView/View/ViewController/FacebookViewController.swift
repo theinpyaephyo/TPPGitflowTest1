@@ -132,6 +132,7 @@ extension FacebookViewController: UICollectionViewDataSource{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoomItemCollectionViewCell.identifier, for: indexPath) as! RoomItemCollectionViewCell
                 let count = indexPath.row - 1
                 cell.profileImageUrl = imageUrlObjectList[count]
+                cell.addRoomItemDelegate = self
                 return cell
             }
             
@@ -176,6 +177,15 @@ extension FacebookViewController: UITableViewDataSource {
         return cell
     }
   
+}
+extension FacebookViewController: AddRoomItemDelegate {
+    func onClick(imageUrl: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: RoomItemDetailViewController.identifier) as! RoomItemDetailViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        vc.roomImage = imageUrl
+    }
 }
 
 extension FacebookViewController: AddStoryItemDelegate {
