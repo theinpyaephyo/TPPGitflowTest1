@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3443FBDC2556CDA500F9742E /* StoryImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */; };
 		3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */; };
+		3487891B255D6DA300B2E19C /* CreateStoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */; };
 		34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */; };
 		34F23C9C255189AE00D2EE72 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F23C9B255189AD00D2EE72 /* CardView.swift */; };
 		3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5829254488C80059FD5C /* FacebookViewController.swift */; };
@@ -42,6 +43,7 @@
 		247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImageDetailsViewController.swift; sourceTree = "<group>"; };
 		3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryItemDelegate.swift; sourceTree = "<group>"; };
+		3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoryDetailsViewController.swift; sourceTree = "<group>"; };
 		34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrisiveTableView.swift; sourceTree = "<group>"; };
 		34F23C9B255189AD00D2EE72 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3A5B5829254488C80059FD5C /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				3A6777DE255181B8009D6DB3 /* AdidasViewController.swift */,
 				3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */,
 				3A66F4732557BA84007F78B0 /* RoomItemDetailViewController.swift */,
+				3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				3A66F4742557BA84007F78B0 /* RoomItemDetailViewController.swift in Sources */,
 				3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */,
 				3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */,
+				3487891B255D6DA300B2E19C /* CreateStoryDetailsViewController.swift in Sources */,
 				3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */,
 				3443FBDC2556CDA500F9742E /* StoryImageDetailsViewController.swift in Sources */,
 				3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */,
@@ -484,7 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpp1.ContactListView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -504,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tpp1.ContactListView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

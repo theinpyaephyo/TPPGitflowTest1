@@ -116,7 +116,7 @@ extension FacebookViewController: UICollectionViewDataSource{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddStoryCollectionViewCell.identifier, for: indexPath) as! AddStoryCollectionViewCell
                 let count = indexPath.row - 1
                 cell.storyImageUrl = addStoryObjectList[count]
-                cell.addStoryItemDelegate = self
+//                cell.addStoryItemDelegate = self
                 return cell
             }
             
@@ -132,7 +132,7 @@ extension FacebookViewController: UICollectionViewDataSource{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RoomItemCollectionViewCell.identifier, for: indexPath) as! RoomItemCollectionViewCell
                 let count = indexPath.row - 1
                 cell.profileImageUrl = imageUrlObjectList[count]
-                cell.addRoomItemDelegate = self
+//                cell.addRoomItemDelegate = self
                 return cell
             }
             
@@ -147,7 +147,6 @@ extension FacebookViewController: UICollectionViewDataSource{
 
 extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-   
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if collectionView == addStoryCollectionView {
@@ -165,6 +164,32 @@ extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDele
         }
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == addStoryCollectionView {
+            if indexPath.row != 0 {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(identifier: StoryImageDetailsViewController.identifier) as! StoryImageDetailsViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                vc.storyImage = addStoryObjectList[indexPath.row - 1].url
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(identifier: CreateStoryDetailsViewController.identifier) as! CreateStoryDetailsViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                vc.addStoryObjectList = self.addStoryObjectList
+            }
+        } else {
+            if indexPath.row != 0 {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(identifier: RoomItemDetailViewController.identifier) as! RoomItemDetailViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                vc.roomImage = imageUrlObjectList[indexPath.row - 1].url
+            }
+        }
+    }
 }
 
 //Table View
@@ -179,25 +204,25 @@ extension FacebookViewController: UITableViewDataSource {
     }
   
 }
-extension FacebookViewController: AddRoomItemDelegate {
-    func onClick(imageUrl: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: RoomItemDetailViewController.identifier) as! RoomItemDetailViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-        vc.roomImage = imageUrl
-    }
-}
-
-extension FacebookViewController: AddStoryItemDelegate {
-    func onTheinPayePhyo(imageUrl: String) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: StoryImageDetailsViewController.identifier) as! StoryImageDetailsViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-        vc.storyImage = imageUrl
-    }
-}
+//extension FacebookViewController: AddRoomItemDelegate {
+//    func onClick(imageUrl: String) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(identifier: RoomItemDetailViewController.identifier) as! RoomItemDetailViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//        vc.roomImage = imageUrl
+//    }
+//}
+//
+//extension FacebookViewController: AddStoryItemDelegate {
+//    func onTheinPayePhyo(imageUrl: String) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(identifier: StoryImageDetailsViewController.identifier) as! StoryImageDetailsViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//        vc.storyImage = imageUrl
+//    }
+//}
 
 
 

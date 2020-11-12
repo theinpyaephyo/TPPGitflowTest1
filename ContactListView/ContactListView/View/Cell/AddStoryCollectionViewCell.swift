@@ -19,7 +19,7 @@ class AddStoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var transparentView: UIView!
     
-    var addStoryItemDelegate: AddStoryItemDelegate?
+//    var addStoryItemDelegate: AddStoryItemDelegate?
     
     var storyImageUrl: ImageUrlVO? {
         
@@ -39,16 +39,16 @@ class AddStoryCollectionViewCell: UICollectionViewCell {
         addStoryImage.layer.cornerRadius = 10
         transparentView.layer.cornerRadius = 10
         
-        parentView.isUserInteractionEnabled = true
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickStory))
-        parentView.addGestureRecognizer(tapGesture)
+//        parentView.isUserInteractionEnabled = true
+//        
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClickStory))
+//        parentView.addGestureRecognizer(tapGesture)
     
     }
     
     @objc func onClickStory() {
         if let imageUrl = storyImageUrl?.url {
-            addStoryItemDelegate?.onTheinPayePhyo(imageUrl: imageUrl)
+//            addStoryItemDelegate?.onTheinPayePhyo(imageUrl: imageUrl)
         }
     }
 
