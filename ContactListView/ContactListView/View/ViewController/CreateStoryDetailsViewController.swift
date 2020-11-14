@@ -12,6 +12,7 @@ class CreateStoryDetailsViewController: UIViewController {
     
     static let identifier = "CreateStoryDetailsViewController"
     
+    @IBOutlet weak var btnClose: UIView!
     @IBOutlet weak var collecitonViewStoryGridList: UICollectionView!
     
     var addStoryObjectList: [ImageUrlVO]? {
@@ -36,9 +37,20 @@ class CreateStoryDetailsViewController: UIViewController {
         // delegate
         collecitonViewStoryGridList.delegate = self
         
+        btnClose.isUserInteractionEnabled = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onClick))
+        btnClose.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    @objc func onClick() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
+
+
 
 extension CreateStoryDetailsViewController: UICollectionViewDataSource {
     

@@ -21,6 +21,7 @@
 		3A6FC355253CACAE006E4B04 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */; };
 		3A9A298B25468CFF000A94FD /* CreateAStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */; };
 		3A9A298C25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */; };
+		3A9C53D6255FA65300A89EF2 /* CreateRoomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C53D5255FA65300A89EF2 /* CreateRoomDetailViewController.swift */; };
 		3ABF15292541400A007BF50C /* RoomItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */; };
 		3ABF152A2541400A007BF50C /* RoomItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */; };
 		3ABF152C2541404C007BF50C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF152B2541404C007BF50C /* HomeViewController.swift */; };
@@ -55,6 +56,7 @@
 		3A6FC354253CACAE006E4B04 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		3A9A298925468CFF000A94FD /* CreateAStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateAStoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A9C53D5255FA65300A89EF2 /* CreateRoomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomDetailViewController.swift; sourceTree = "<group>"; };
 		3ABF15272541400A007BF50C /* RoomItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3ABF15282541400A007BF50C /* RoomItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		3ABF152B2541404C007BF50C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */,
 				3A66F4732557BA84007F78B0 /* RoomItemDetailViewController.swift */,
 				3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */,
+				3A9C53D5255FA65300A89EF2 /* CreateRoomDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				3AF1D9112529900B00DC40EF /* AppDelegate.swift in Sources */,
 				3A66F4742557BA84007F78B0 /* RoomItemDetailViewController.swift in Sources */,
 				3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */,
+				3A9C53D6255FA65300A89EF2 /* CreateRoomDetailViewController.swift in Sources */,
 				3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */,
 				3487891B255D6DA300B2E19C /* CreateStoryDetailsViewController.swift in Sources */,
 				3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */,

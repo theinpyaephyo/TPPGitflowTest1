@@ -47,9 +47,9 @@ class AddStoryCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func onClickStory() {
-        if let imageUrl = storyImageUrl?.url {
+//        if let imageUrl = storyImageUrl?.url {
 //            addStoryItemDelegate?.onTheinPayePhyo(imageUrl: imageUrl)
-        }
+//        }
     }
 
 }

@@ -187,6 +187,12 @@ extension FacebookViewController: UICollectionViewDelegate, UICollectionViewDele
                 vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
                 vc.roomImage = imageUrlObjectList[indexPath.row - 1].url
+            }else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(identifier: CreateRoomDetailViewController.identifier) as! CreateRoomDetailViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+                vc.addRoomItemObjectList = self.imageUrlObjectList
             }
         }
     }
