@@ -15,7 +15,6 @@ class ContactListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
         tableViewContactList.register(UINib(nibName: ContactListViewItemTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ContactListViewItemTableViewCell.identifier)
         
         tableViewContactList.dataSource = self
