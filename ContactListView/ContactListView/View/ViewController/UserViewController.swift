@@ -26,7 +26,7 @@ import SwiftyJSON
 //    }
 //}
 
-struct UserVO: Codable {
+class UserVO: Codable {
     var id: Int
     var email: String
     var firstName: String
@@ -42,12 +42,24 @@ class UserViewController: UIViewController {
     
     static let identifier = "UserViewController"
 
-    @IBOutlet weak var lblUserEmail: UILabel!
+    @IBOutlet weak var tableViewUserList: UITableView!
+    
+    var users: [UserVO] = []
+    
+    let usersImages = ["https://st1.latestly.com/wp-content/uploads/2019/08/Gigi-Hadid-781x441.jpg","https://www.shemazing.net/wp-content/uploads/2016/02/capture_1151_2.jpg","https://assets.capitalfm.com/2016/11/gigi-hadid-hottest-photos-2-1457969541-view-1.jpg","https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F07%2Fyara.jpg&q=85","https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/02/07/13/kiki-layne.jpg","https://variety.com/wp-content/uploads/2020/07/yara-shahidi.jpg"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AF.request("https://reqres.in/api/users/2").responseJSON { (response) in
+        tableViewUserList.register(UINib(nibName: UserTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: UserTableViewCell.identifier)
+        
+        tableViewUserList.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        
+        tableViewUserList.separatorStyle = .none
+        
+        tableViewUserList.dataSource = self
+        
+        AF.request("https://reqres.in/api/users?page=2").responseJSON { (response) in
 
             switch response.result {
             
@@ -59,11 +71,15 @@ class UserViewController: UIViewController {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
 
                 do {
-                    let dataVO = try decoder.decode(DataVO.self, from: Data(json.rawData()))
-
-                    let user = dataVO.data
-
-                    self.lblUserEmail.text = user.lastName
+                    self.users = try decoder.decode([UserVO].self, from: Data(json["data"].rawData()))
+                    
+                    var count = 0
+                    self.users.forEach { (user) in
+                        user.avatar = self.usersImages[count]
+                        count += 1
+                    }
+                    
+                    self.tableViewUserList.reloadData()
 
                 } catch let jsonErr {
                     print(jsonErr)
@@ -104,4 +120,16 @@ class UserViewController: UIViewController {
 //        }.resume()
     }
 
+}
+
+extension UserViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.identifier, for: indexPath) as! UserTableViewCell
+        cell.user = users[indexPath.row]
+        return cell
+    }
 }

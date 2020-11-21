@@ -11,6 +11,8 @@
 		3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */; };
 		3475BDCD256031D0006C104E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475BDCC256031CF006C104E /* UserViewController.swift */; };
 		3487891B255D6DA300B2E19C /* CreateStoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */; };
+		34AA474B25695CD30083CFC4 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AA474925695CD30083CFC4 /* UserTableViewCell.swift */; };
+		34AA474C25695CD30083CFC4 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34AA474A25695CD30083CFC4 /* UserTableViewCell.xib */; };
 		34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */; };
 		34F23C9C255189AE00D2EE72 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F23C9B255189AD00D2EE72 /* CardView.swift */; };
 		3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B5829254488C80059FD5C /* FacebookViewController.swift */; };
@@ -47,6 +49,8 @@
 		3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryItemDelegate.swift; sourceTree = "<group>"; };
 		3475BDCC256031CF006C104E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		3487891A255D6DA300B2E19C /* CreateStoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStoryDetailsViewController.swift; sourceTree = "<group>"; };
+		34AA474925695CD30083CFC4 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		34AA474A25695CD30083CFC4 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrisiveTableView.swift; sourceTree = "<group>"; };
 		34F23C9B255189AD00D2EE72 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3A5B5829254488C80059FD5C /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				3A9A298A25468CFF000A94FD /* CreateAStoryCollectionViewCell.xib */,
 				3AC1BEB1254A65D300175921 /* NewsFeedTableViewCell.swift */,
 				3AC1BEB2254A65D300175921 /* NewsFeedTableViewCell.xib */,
+				34AA474925695CD30083CFC4 /* UserTableViewCell.swift */,
+				34AA474A25695CD30083CFC4 /* UserTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 				3ACFE9992543D75F00EF4D0A /* CreateRoomCollectionViewCell.xib in Resources */,
 				3AF1D91D2529901400DC40EF /* LaunchScreen.storyboard in Resources */,
 				3AF1D91A2529901400DC40EF /* Assets.xcassets in Resources */,
+				34AA474C25695CD30083CFC4 /* UserTableViewCell.xib in Resources */,
 				3AF1D92D2529A28600DC40EF /* ContactListViewItemTableViewCell.xib in Resources */,
 				3A5B582E2544B2CB0059FD5C /* AddStoryCollectionViewCell.xib in Resources */,
 				3ABF152A2541400A007BF50C /* RoomItemCollectionViewCell.xib in Resources */,
@@ -320,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A66F4762557BF0B007F78B0 /* AddRoomItemDelegate.swift in Sources */,
+				34AA474B25695CD30083CFC4 /* UserTableViewCell.swift in Sources */,
 				3AF1D925252990BE00DC40EF /* ContactListViewController.swift in Sources */,
 				3ACFE9982543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift in Sources */,
 				3475BDCD256031D0006C104E /* UserViewController.swift in Sources */,
