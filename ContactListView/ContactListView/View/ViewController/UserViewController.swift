@@ -26,6 +26,7 @@ import SwiftyJSON
 //    }
 //}
 
+
 class UserVO: Codable {
     var id: Int
     var email: String
@@ -58,66 +59,39 @@ class UserViewController: UIViewController {
         tableViewUserList.separatorStyle = .none
         
         tableViewUserList.dataSource = self
+                
+        loadInitialData()
+    }
+    
+    func loadInitialData() {
         
-        AF.request("https://reqres.in/api/users?page=2").responseJSON { (response) in
+        NetworkClient.shared.getData(route: "api/users") { (data) in
 
-            switch response.result {
-            
-            case .success(let data):
+            guard let data = data as? JSON else { return }
 
-                let json = JSON(data)
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
+            do {
 
-                do {
-                    self.users = try decoder.decode([UserVO].self, from: Data(json["data"].rawData()))
-                    
-                    var count = 0
-                    self.users.forEach { (user) in
-                        user.avatar = self.usersImages[count]
-                        count += 1
-                    }
-                    
-                    self.tableViewUserList.reloadData()
+                self.users = try decoder.decode([UserVO].self, from: Data(data["data"].rawData()))
 
-                } catch let jsonErr {
-                    print(jsonErr)
+                var count = 0
+                self.users.forEach { (user) in
+                    user.avatar = self.usersImages[count]
+                    count += 1
                 }
 
-                break
+                self.tableViewUserList.reloadData()
 
-            case .failure(let err):
-                print(err.localizedDescription)
-                break
-
+            } catch let jsonErr {
+                print(jsonErr.localizedDescription)
             }
 
+        } failure: { (err) in
+            print(err)
         }
-
-//        guard let url = URL(string: "https://reqres.in/api/users/2") else { return }
-//
-//        URLSession.shared.dataTask(with: url) { (data, response, err) in
-//
-//            guard let data = data else { return }
-//
-//            do {
-//
-//                guard let responseDataKeyValueArray = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else { return }
-//
-//                let user = UserVO(json: responseDataKeyValueArray["data"] as! [String: Any])
-//
-//                DispatchQueue.main.async {
-//                    self.lblUserEmail.text = user.lastName
-//                }
-//
-//                print(user)
-//
-//            } catch let jsonErr {
-//                print(jsonErr.localizedDescription)
-//            }
-//
-//        }.resume()
+        
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34265C98256AA24B0009A93C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34265C97256AA24B0009A93C /* NetworkClient.swift */; };
 		3443FBDC2556CDA500F9742E /* StoryImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */; };
 		3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */; };
 		3475BDCD256031D0006C104E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3475BDCC256031CF006C104E /* UserViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34265C97256AA24B0009A93C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		3443FBDB2556CDA500F9742E /* StoryImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImageDetailsViewController.swift; sourceTree = "<group>"; };
 		3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryItemDelegate.swift; sourceTree = "<group>"; };
 		3475BDCC256031CF006C104E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				34F23C9B255189AD00D2EE72 /* CardView.swift */,
 				3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */,
 				3A66F4752557BF0B007F78B0 /* AddRoomItemDelegate.swift */,
+				34265C97256AA24B0009A93C /* NetworkClient.swift */,
 			);
 			path = ContactListView;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */,
 				3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */,
 				3AF1D9132529900B00DC40EF /* SceneDelegate.swift in Sources */,
+				34265C98256AA24B0009A93C /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
