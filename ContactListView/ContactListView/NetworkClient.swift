@@ -19,10 +19,12 @@ class NetworkClient {
     let baseUrl = "https://reqres.in/"
     
     func getData(route: String,
+                 httpHeaders: HTTPHeaders,
+                 parameters: Parameters,
                  success: @escaping (Any) -> Void,
                  failure: @escaping (String) -> Void) {
         
-        AF.request(baseUrl + route).responseJSON { (response) in
+        AF.request(baseUrl + route, method: .get, parameters: parameters, headers: httpHeaders).responseJSON { (response) in
             
             switch response.result {
             
@@ -38,5 +40,5 @@ class NetworkClient {
             }
         }
     }
-    
+
 }

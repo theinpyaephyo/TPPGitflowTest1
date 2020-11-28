@@ -45,10 +45,12 @@ class UserViewController: UIViewController {
 
     @IBOutlet weak var tableViewUserList: UITableView!
     
+    let activityIndicator = UIActivityIndicatorView()
+    
     var users: [UserVO] = []
     
-    let usersImages = ["https://st1.latestly.com/wp-content/uploads/2019/08/Gigi-Hadid-781x441.jpg","https://www.shemazing.net/wp-content/uploads/2016/02/capture_1151_2.jpg","https://assets.capitalfm.com/2016/11/gigi-hadid-hottest-photos-2-1457969541-view-1.jpg","https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2019%2F07%2Fyara.jpg&q=85","https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/02/07/13/kiki-layne.jpg","https://variety.com/wp-content/uploads/2020/07/yara-shahidi.jpg"]
-    
+    var page = 1
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,39 +61,52 @@ class UserViewController: UIViewController {
         tableViewUserList.separatorStyle = .none
         
         tableViewUserList.dataSource = self
+        tableViewUserList.delegate = self
                 
         loadInitialData()
     }
     
     func loadInitialData() {
         
-        NetworkClient.shared.getData(route: "api/users") { (data) in
-
-            guard let data = data as? JSON else { return }
-
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-            do {
-
-                self.users = try decoder.decode([UserVO].self, from: Data(data["data"].rawData()))
-
-                var count = 0
-                self.users.forEach { (user) in
-                    user.avatar = self.usersImages[count]
-                    count += 1
-                }
-
-                self.tableViewUserList.reloadData()
-
-            } catch let jsonErr {
-                print(jsonErr.localizedDescription)
-            }
-
+        UserDataModel.shared.getUsers { (users) in
+            self.users = users
+            self.tableViewUserList.reloadData()
         } failure: { (err) in
             print(err)
         }
         
+//        NetworkClient.shared.getData(route: "api/users") { (data) in
+//
+//            guard let data = data as? JSON else { return }
+//
+//            let decoder = JSONDecoder()
+//            decoder.keyDecodingStrategy = .convertFromSnakeCase
+//
+//            do {
+//
+//                self.users = try decoder.decode([UserVO].self, from: Data(data["data"].rawData()))
+//
+//                self.tableViewUserList.reloadData()
+//
+//            } catch let jsonErr {
+//                print(jsonErr.localizedDescription)
+//            }
+//
+//        } failure: { (err) in
+//            print(err)
+//        }
+        
+    }
+    
+    
+    
+    func loadMoreData(page: Int) {
+        UserDataModel.shared.getUsers(page: page) { (users) in
+            self.users.append(contentsOf: users)
+            self.tableViewUserList.reloadData()
+        } failure: { (err) in
+            print(err)
+        }
     }
 
 }
@@ -106,4 +121,20 @@ extension UserViewController: UITableViewDataSource {
         cell.user = users[indexPath.row]
         return cell
     }
+}
+
+extension UserViewController: UITableViewDelegate {
+        
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        // check tableview reachs end method
+        if tableViewUserList.contentOffset.y >= (tableViewUserList.contentSize.height - tableViewUserList.frame.size.height) {
+            
+            if page == 1 {
+                page += 1
+                loadMoreData(page: page)
+            }
+        }
+    }
+    
 }
