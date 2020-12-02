@@ -40,5 +40,31 @@ class NetworkClient {
             }
         }
     }
+    
+                    
+    func postData(request: URLRequest,
+                  success: @escaping (Any) -> Void,
+                  failure: @escaping (String) -> Void) {
+        
+        AF.request(request).responseJSON { (response) in
+            
+            switch response.result {
+            
+            case .success(let data):
+                let json = JSON(data)
+                success(json)
+                break
+
+            case .failure(let err):
+                failure(err.localizedDescription)
+                break
+
+            }
+            
+        }
+        
+    }
+    
 
 }
+

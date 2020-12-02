@@ -40,5 +40,35 @@ final class UserDataModel {
             print(err)
         }
     }
+    
+    func createUser(workerRequest: WorkerRequest, success: @escaping (WorkerVO) -> Void, failure: @escaping (String) -> Void) {
+        
+        let url = URL(string: "https://reqres.in/api/users")
+                
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        
+        let encoder = JSONEncoder()
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        do {
+            request.httpBody = try encoder.encode(workerRequest)
+        } catch let jsonErr {
+            print(jsonErr)
+        }
+        
+        NetworkClient.shared.postData(request: request) { (data) in
+            guard let data = data as? JSON else { return }
+            do {
+                self.decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let worker = try self.decoder.decode(WorkerVO.self, from: Data(data.rawData()))
+                success(worker)
+            } catch let jsonErr {
+                print(jsonErr)
+            }
+        } failure: { (err) in
+            print(err)
+        }
+    }
+    
 
 }

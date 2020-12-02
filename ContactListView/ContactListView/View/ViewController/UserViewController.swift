@@ -27,25 +27,23 @@ import SwiftyJSON
 //}
 
 
-class UserVO: Codable {
-    var id: Int
-    var email: String
-    var firstName: String
-    var lastName: String
-    var avatar: String
+//MVVM => Model -> VO - View -> ViewController / Storyboard - ViewModel -> View Provider
+
+class UserViewModel {
+    
+    var users: [UserVO] = []
 }
 
-struct DataVO: Codable {
-    var data: UserVO
-}
 
 class UserViewController: UIViewController {
-    
+        
     static let identifier = "UserViewController"
 
     @IBOutlet weak var tableViewUserList: UITableView!
     
     let activityIndicator = UIActivityIndicatorView()
+    
+    let userViewModel = UserViewModel()
     
     var users: [UserVO] = []
     
@@ -74,6 +72,15 @@ class UserViewController: UIViewController {
         } failure: { (err) in
             print(err)
         }
+        
+        let workerRequest = WorkerRequest(name: "Mg Mg", job: "Developer")
+        
+        UserDataModel.shared.createUser(workerRequest: workerRequest) { (worker) in
+            print(worker)
+        } failure: { (err) in
+            print(err)
+        }
+
         
 //        NetworkClient.shared.getData(route: "api/users") { (data) in
 //

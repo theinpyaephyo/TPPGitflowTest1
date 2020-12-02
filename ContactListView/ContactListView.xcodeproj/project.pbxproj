@@ -42,6 +42,10 @@
 		3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF1D92A2529A28600DC40EF /* ContactListViewItemTableViewCell.swift */; };
 		3AF1D92D2529A28600DC40EF /* ContactListViewItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */; };
 		54D874C830FD94D0C8CBD79A /* Pods_ContactListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247EC750CAECF5305D07B4AB /* Pods_ContactListView.framework */; };
+		B778142E2577C09B007B9C52 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778142D2577C09B007B9C52 /* UserVO.swift */; };
+		B77814502577C2B0007B9C52 /* WorkerVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778144F2577C2B0007B9C52 /* WorkerVO.swift */; };
+		B77814532577C2C6007B9C52 /* DataVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77814522577C2C6007B9C52 /* DataVO.swift */; };
+		B77814562577C2DE007B9C52 /* WorkerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77814552577C2DE007B9C52 /* WorkerRequest.swift */; };
 		B7A271132572946000FEA4B6 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A271122572946000FEA4B6 /* UserDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +89,10 @@
 		3AF1D92B2529A28600DC40EF /* ContactListViewItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListViewItemTableViewCell.xib; sourceTree = "<group>"; };
 		5F77F5D582ADE73DB1C45CA2 /* Pods-ContactListView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactListView.debug.xcconfig"; path = "Target Support Files/Pods-ContactListView/Pods-ContactListView.debug.xcconfig"; sourceTree = "<group>"; };
 		A4BAB7C7E9EE189D4EA59DE5 /* Pods-ContactListView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactListView.release.xcconfig"; path = "Target Support Files/Pods-ContactListView/Pods-ContactListView.release.xcconfig"; sourceTree = "<group>"; };
+		B778142D2577C09B007B9C52 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		B778144F2577C2B0007B9C52 /* WorkerVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerVO.swift; sourceTree = "<group>"; };
+		B77814522577C2C6007B9C52 /* DataVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVO.swift; sourceTree = "<group>"; };
+		B77814552577C2DE007B9C52 /* WorkerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerRequest.swift; sourceTree = "<group>"; };
 		B7A271122572946000FEA4B6 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,19 +195,63 @@
 		3AF1D90F2529900B00DC40EF /* ContactListView */ = {
 			isa = PBXGroup;
 			children = (
+				B778143D2577C172007B9C52 /* Component */,
+				B778143C2577C15B007B9C52 /* Delegate */,
+				B778143B2577C100007B9C52 /* Data */,
+				B778143A2577C0F1007B9C52 /* Network */,
 				3492C7EE2547C4A6007A2994 /* Resource */,
 				3492C7ED2547C49B007A2994 /* View */,
 				3AF1D9102529900B00DC40EF /* AppDelegate.swift */,
 				3AF1D9122529900B00DC40EF /* SceneDelegate.swift */,
 				3AF1D91E2529901400DC40EF /* Info.plist */,
-				34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */,
-				34F23C9B255189AD00D2EE72 /* CardView.swift */,
-				3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */,
-				3A66F4752557BF0B007F78B0 /* AddRoomItemDelegate.swift */,
-				34265C97256AA24B0009A93C /* NetworkClient.swift */,
-				B7A271122572946000FEA4B6 /* UserDataModel.swift */,
 			);
 			path = ContactListView;
+			sourceTree = "<group>";
+		};
+		B778142C2577C08A007B9C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B778142D2577C09B007B9C52 /* UserVO.swift */,
+				B778144F2577C2B0007B9C52 /* WorkerVO.swift */,
+				B77814522577C2C6007B9C52 /* DataVO.swift */,
+				B77814552577C2DE007B9C52 /* WorkerRequest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B778143A2577C0F1007B9C52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34265C97256AA24B0009A93C /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B778143B2577C100007B9C52 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B7A271122572946000FEA4B6 /* UserDataModel.swift */,
+				B778142C2577C08A007B9C52 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B778143C2577C15B007B9C52 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				3443FBDE2556D50900F9742E /* AddStoryItemDelegate.swift */,
+				3A66F4752557BF0B007F78B0 /* AddRoomItemDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		B778143D2577C172007B9C52 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				34E3C179254BB5F300C5E0D8 /* IntrisiveTableView.swift */,
+				34F23C9B255189AD00D2EE72 /* CardView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		FAFE3369DBD1D924E543B1B1 /* Frameworks */ = {
@@ -333,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A66F4762557BF0B007F78B0 /* AddRoomItemDelegate.swift in Sources */,
+				B778142E2577C09B007B9C52 /* UserVO.swift in Sources */,
 				34AA474B25695CD30083CFC4 /* UserTableViewCell.swift in Sources */,
 				3AF1D925252990BE00DC40EF /* ContactListViewController.swift in Sources */,
 				3ACFE9982543D75F00EF4D0A /* CreateRoomCollectionViewCell.swift in Sources */,
@@ -346,12 +399,15 @@
 				3A6777DF255181B8009D6DB3 /* AdidasViewController.swift in Sources */,
 				3A9C53D6255FA65300A89EF2 /* CreateRoomDetailViewController.swift in Sources */,
 				3443FBDF2556D50900F9742E /* AddStoryItemDelegate.swift in Sources */,
+				B77814502577C2B0007B9C52 /* WorkerVO.swift in Sources */,
 				3487891B255D6DA300B2E19C /* CreateStoryDetailsViewController.swift in Sources */,
 				3A5B582A254488C80059FD5C /* FacebookViewController.swift in Sources */,
+				B77814532577C2C6007B9C52 /* DataVO.swift in Sources */,
 				3443FBDC2556CDA500F9742E /* StoryImageDetailsViewController.swift in Sources */,
 				3AF1D92C2529A28600DC40EF /* ContactListViewItemTableViewCell.swift in Sources */,
 				3A9A298B25468CFF000A94FD /* CreateAStoryCollectionViewCell.swift in Sources */,
 				3ABF152C2541404C007BF50C /* HomeViewController.swift in Sources */,
+				B77814562577C2DE007B9C52 /* WorkerRequest.swift in Sources */,
 				34E3C17A254BB5F300C5E0D8 /* IntrisiveTableView.swift in Sources */,
 				3A5B582D2544B2CB0059FD5C /* AddStoryCollectionViewCell.swift in Sources */,
 				B7A271132572946000FEA4B6 /* UserDataModel.swift in Sources */,
